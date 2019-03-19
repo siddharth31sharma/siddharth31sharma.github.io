@@ -1,0 +1,312 @@
+@import "~bulma/bulma";
+
+$white: hsl(0, 0%, 96%);
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #272732;
+    height: 100vh;
+    flex-wrap: wrap;
+
+   
+}
+.typewriter{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+}
+h1 {
+ 
+    font-weight: 200;
+    margin: 0.4em 0;
+}
+.bar {
+    color: black
+}
+
+// .box:not(:last-child),
+// .content:not(:last-child),
+// .notification:not(:last-child),
+// .progress:not(:last-child),
+// .table:not(:last-child),
+// .table-container:not(:last-child),
+// .title:not(:last-child),
+// .subtitle:not(:last-child),
+// .block:not(:last-child),
+// .highlight:not(:last-child),
+// .breadcrumb:not(:last-child),
+// .level:not(:last-child),
+// .list:not(:last-child),
+// .message:not(:last-child),
+.tabs:not(:last-child) {
+    // background-color: black;
+    margin-bottom: 0rem;
+
+}
+
+.tabs a {
+    // background-color: black;
+    color: white
+}
+
+.tabs {
+    background-color: black;
+}
+
+a:hover {
+    background-color: hsl(0, 0%, 96%);
+}
+
+$tabs-link-hover-border-bottom-color: $white;
+$tabs-link-hover-color:$white;
+$tabs-link-color: $white;
+
+.about {
+    height: 100%;
+
+}
+
+.about1 {
+    display: flex;
+    justify-content: start;
+
+}
+
+.about2 {
+    margin-left: 10%;
+    margin-top: 3%;
+}
+.about3 {
+    margin-left: 10%;
+    margin-bottom: 2%;
+}
+
+.about2-lang {
+    height: 20rem;
+    display: flex;
+    flex-direction: row;
+    padding: .5rem 0;
+    flex-wrap: wrap;
+
+}
+
+
+.aboutme {
+    width: 40%;
+    height: 30%;
+    margin-top: 6%;
+    margin-left: 10%;
+}
+
+.about-text {
+    padding-right: 30px;
+    margin-bottom: 40px;
+}
+
+.title {
+    text-align: left;
+    margin: 0px;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.title-small {
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .17em;
+    text-align: left;
+}
+
+.history {
+    margin-top: 10%;
+    margin-left: 5%;
+
+}
+
+.sec-text {
+    color: #999988
+}
+
+.text-font {
+    font-size: 1.2rem
+}
+
+.space {
+    margin-top: 10px;
+}
+
+.left {
+    margin-left: 50px;
+}
+
+.box2 {
+    margin: .5rem 2rem;
+    width: 40%;
+    border: solid 2px #0f4870;
+    line-height: 1.5rem;
+    padding: .35rem;
+}
+
+.about3-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* width: 50%; */
+    padding: 0rem 2rem;
+}
+
+.pading-text {
+    padding: .35rem;
+}
+
+// .typewriter h1 {
+//     overflow: hidden;
+//     /* Ensures the content is not revealed until the animation */
+//     border-right: .15em solid orange;
+//     /* The typwriter cursor */
+//     white-space: nowrap;
+//     /* Keeps the content on a single line */
+//     margin: 0 auto;
+//     /* Gives that scrolling effect as the typing happens */
+//     letter-spacing: .15em;
+//     /* Adjust as needed */
+//     animation:
+//         typing 3.5s steps(40, end),
+//         blink-caret .75s step-end infinite;
+// }
+
+/* The typing effect */
+// @keyframes typing {
+//     from {
+//         width: 0
+//     }
+
+//     to {
+//         width: 100%
+//     }
+// }
+
+// /* The typewriter cursor effect */
+// @keyframes blink-caret {
+
+//     from,
+//     to {
+//         border-color: transparent
+//     }
+
+//     50% {
+//         border-color: orange;
+//     }
+// }
+
+.work {
+    height: 100vh;
+
+}
+
+.workbody {
+    border: solid 30px  #3D3D48;
+    height: 100%;
+}
+
+.workfiled {
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.worktitle {
+    display: flex;
+    justify-content: space-between
+}
+
+.pading-box {
+    padding: 3%
+}
+
+.work-box-magin {
+    margin-top: 9%
+}
+
+a:hover {
+    box-shadow: 0 0.25rem 1.25rem rgba(15, 72, 112, 0.4), 0 0 0.25rem rgba(15, 72, 112, 0.12), 0 1.25rem 1.25rem rgba(15, 72, 112, 0.12);
+}
+.work-box{
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    color: #4a4a4a;
+    display: block;
+    padding: 1.25rem;
+}
+.tab-effect{
+    height: 100px;
+    line-height: 100px;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    top: 0;
+
+    transition: all 0.4s;
+}
+.footer{
+    height: 100%;
+    background-color: #3D3D48;
+    display: flex;
+    flex-direction: row;
+    padding: .5rem 0rem;
+    flex-wrap: wrap;
+}
+.footer-form{
+    // border: 3px solid #f1f1f1;
+    padding: 26px;
+    width: 640px;
+  
+}
+.footer-div{
+    // width: 40%;
+    padding: .35rem;
+    border: solid 2px #0f4870;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: .75rem;
+    justify-content: space-between;
+}
+.footer-input{
+    line-height: 1.5rem;
+    font-weight: bold;
+    font-size: 1.35rem;
+    width: 85%;
+    border: none;
+    background:#3D3D48;
+    color:white;
+}
+.footer-hight{
+    height: 85%;
+}
+.footer-button{
+    width: 100%;
+    background: #2D4571;
+    font-weight: 600;
+    color: #ff6162;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.valid{
+    color:red 
+}
+.succ{
+    color: green 
+}
+.wrap { border-right: 0.08em solid orange }
