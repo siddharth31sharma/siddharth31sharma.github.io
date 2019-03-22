@@ -14,7 +14,13 @@ module.exports = {
                     ),
                     m('div.history',
                         m('div', 'Employment history'),
-                        m('div.box.space',
+                        m('a.work-box',
+                        {
+                            href:'https://www.balefire.co/',
+                            target: "_blank"   
+                        
+
+                        },
                             m('div.text-font', 'Full-Stack Developer   ', m('span.text-font.left.sec-text', 'Aug-18 - Feb-28'), ),
 
                             m('div.sec-text.text-font', 'Balefire Labs Pvt Ltd India')

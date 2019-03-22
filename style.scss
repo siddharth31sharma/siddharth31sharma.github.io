@@ -14,6 +14,7 @@ $white: hsl(0, 0%, 96%);
    
 }
 .typewriter{
+    width: 30%;
     color: white;
     font-family: 'Raleway', sans-serif;
     font-size: 50px;
@@ -53,7 +54,7 @@ h1 {
 }
 
 .tabs {
-    background-color: black;
+    background-color: #06819C;
 }
 
 a:hover {
@@ -207,16 +208,18 @@ $tabs-link-color: $white;
 
 .work {
     height: 100vh;
-
+    border-top: 5px solid #1C6EA4;
 }
-
+.workSide{
+    margin-top: 10%;
+}
 .workbody {
     border: solid 30px  #3D3D48;
     height: 100%;
 }
 
 .workfiled {
-    margin-top: 10%;
+  
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -256,8 +259,9 @@ a:hover {
     transition: all 0.4s;
 }
 .footer{
+    border-top: 5px solid #1C6EA4;
     height: 100%;
-    background-color: #3D3D48;
+    background-color:white;
     display: flex;
     flex-direction: row;
     padding: .5rem 0rem;
@@ -272,8 +276,8 @@ a:hover {
 .footer-div{
     // width: 40%;
     padding: .35rem;
-    border: solid 2px #0f4870;
-    color: white;
+    
+    color:#1C6EA4;
     font-size: 1rem;
     font-weight: 600;
     display: flex;
@@ -283,13 +287,14 @@ a:hover {
     justify-content: space-between;
 }
 .footer-input{
+    
     line-height: 1.5rem;
     font-weight: bold;
     font-size: 1.35rem;
     width: 85%;
-    border: none;
-    background:#3D3D48;
-    color:white;
+    border: solid 2px #0f4870;
+    background: white;
+    color:black;
 }
 .footer-hight{
     height: 85%;

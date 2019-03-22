@@ -6,7 +6,7 @@ module.exports = {
     view: function () {
         return [
             m('div.work',{id:'Work'},
-                m('div.workbody',
+                m('div.workSide',
 
                     m('div.workfiled',
                         m('div.sec-text.is-size-5', 'Application Developed'),
