@@ -6,11 +6,13 @@ module.exports = {
     view: function () {
         return [
             m('div.about',{id:'About'},
+            m('div',
                 m('div.about1',
                     m('div.aboutme',
                         m('p.title-small ', 'About me'),
                         m('h1.title', 'Hello ! I am Siddharth Sharma'),
-                        m('p.about-text', 'this is my portfoilo bla bla bla bla bla blab blab bla bla blabla bla bla bla')
+                        m('p.about-text', 
+                        'This is my portfoilo , I am... Application designer and developer from Rajasthan, currently based in Jaipur, I have studied designing and creating webpages')
                     ),
                     m('div.history',
                         m('div', 'Employment history'),
@@ -74,6 +76,7 @@ module.exports = {
             
 
             )
+        )
             )
         ]
     }

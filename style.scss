@@ -14,7 +14,8 @@ $white: hsl(0, 0%, 96%);
    
 }
 .typewriter{
-    width: 32%;
+    margin-left: 34%;
+    width: 90%;
     color: white;
     font-family: 'Raleway', sans-serif;
     font-size: 50px;
@@ -66,7 +67,8 @@ $tabs-link-hover-color:$white;
 $tabs-link-color: $white;
 
 .about {
-    height: 100%;
+      margin-top: 6%;
+      margin-bottom: 6%;
 
 }
 
@@ -211,7 +213,7 @@ $tabs-link-color: $white;
     border-top: 5px solid #1C6EA4;
 }
 .workSide{
-    margin-top: 10%;
+    margin-top: 8%;
 }
 .workbody {
     border: solid 30px  #3D3D48;
@@ -222,6 +224,7 @@ $tabs-link-color: $white;
   
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 5%;
 }
 
 .worktitle {
@@ -263,12 +266,16 @@ a:hover {
     height: 100%;
     background-color:white;
     display: flex;
+    
+    justify-content: center;
+    margin-bottom: 5%;
     flex-direction: row;
     padding: .5rem 0rem;
     flex-wrap: wrap;
 }
 .footer-form{
     // border: 3px solid #f1f1f1;
+    margin-top: 6%;
     padding: 26px;
     width: 640px;
   

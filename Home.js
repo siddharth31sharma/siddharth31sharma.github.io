@@ -11,45 +11,62 @@ let emptyName = false;
 let atposition = ''
 let dotposition = ''
 let emailSuccess = false
+let notic = function(){
+    if(emailSuccess==true){
+
+        console.log('ti')
+        let time =  setTimeout(function () {
+                console.log(emailSuccess)
+                 emailSuccess = false;
+                console.log(emailSuccess)
+            }, 2000);
+    }
+    
+}
 let emailSend = function (e) {
     e.preventDefault();
-   
+
     atposition = yourEmail.indexOf("@")
     dotposition = yourEmail.indexOf(".")
-    if(yourName == ''){
+    if (yourName == '') {
         emptyName = true;
-    }else{
+    } else {
         console.log('hit2')
-        if(yourEmail == ''){
+        if (yourEmail == '') {
             invalidEmail = true;
-        }else{
+        } else {
             console.log('hit1')
-            if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= yourEmail.length){
+            if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= yourEmail.length) {
                 invalidEmail = true;
-            }else{
+            } else {
                 console.log('hit')
                 m.request({
-                    method: "POST",
-                    url: "https://formcarry.com/s/PFwXXNjHu8v",
-                    data: {
-                        name: yourName,
-                        email: yourEmail,
-                        massage: yourMassage
-                    },
-                    
-                })
-                .then(function (data) {
-                    if (data.status == 'success'){
-                        emailSuccess = true
-                    }
-                })
+                        method: "POST",
+                        url: "https://formcarry.com/s/PFwXXNjHu8v",
+                        data: {
+                            name: yourName,
+                            email: yourEmail,
+                            massage: yourMassage
+                        },
+
+                    })
+                    .then(function (data) {
+                        if (data.status == 'success') {
+                            emailSuccess = true
+                            yourName = '';
+                            yourEmail = '';
+                            yourMassage = '';
+                            notic();
+                        }
+                    })
             }
         }
     }
 
-   
+
 }
-let TxtRotate = function(el, toRotate, period) {
+
+let TxtRotate = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
     this.loopNum = 0;
@@ -57,59 +74,61 @@ let TxtRotate = function(el, toRotate, period) {
     this.txt = '';
     this.tick();
     this.isDeleting = false;
-  };
+};
 
-  TxtRotate.prototype.tick = function() {
+TxtRotate.prototype.tick = function () {
     var i = this.loopNum % this.toRotate.length;
     var fullTxt = this.toRotate[i];
-  
+
     if (this.isDeleting) {
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
     } else {
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
-  
-    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-  
+
+    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
     var that = this;
     var delta = 300 - Math.random() * 100;
-  
-    if (this.isDeleting) { delta /= 2; }
-  
-    if (!this.isDeleting && this.txt === fullTxt) {
-      delta = this.period;
-      this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
-      this.isDeleting = false;
-      this.loopNum++;
-      delta = 500;
+
+    if (this.isDeleting) {
+        delta /= 2;
     }
-  
-    setTimeout(function() {
-      that.tick();
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+    }
+
+    setTimeout(function () {
+        that.tick();
     }, delta);
-  };
+};
 let home = {
-   
+
     port: ['my Portfoilo', 'Siddharth'],
     period: '2000',
 
 
-   
-    oncreate:function(){
+
+    oncreate: function () {
         let elements = document.getElementsByClassName('txt-rotate');
         console.log(elements)
         console.log(elements.length)
-        for (var i=0; i<elements.length; i++) {
+        for (var i = 0; i < elements.length; i++) {
             var toRotate = elements[i].getAttribute('data_rotate');
             console.log(toRotate)
             console.log('hello')
             var period = elements[i].getAttribute('data_period');
-            
+
             if (toRotate) {
                 new TxtRotate(elements[i], JSON.parse(toRotate), period);
             }
-          }
+        }
     },
 
     view: function () {
@@ -122,13 +141,12 @@ let home = {
                 m('div.body',
 
                     m('div.typewriter',
-                        m('h1.name', 'This is ', 
-                        m('span',
-                        {
-                            class:"txt-rotate",
-                            data_period:"2000",
-                            data_rotate:'[ "my Portfoilo", "Siddharth" ]'
-                        }))
+                        m('h1.name', 'This is ',
+                            m('span', {
+                                class: "txt-rotate",
+                                data_period: "2000",
+                                data_rotate: '[ "my Portfoilo", "Siddharth" ]'
+                            }))
                     )
 
 
@@ -150,9 +168,9 @@ let home = {
                             }),
                             value: yourName
                         })
-                       
+
                     ),
-                    emptyName? m('div.valid', "Fill the Name") : '',   
+                    emptyName ? m('div.valid', "Fill the Name") : '',
                     m('div.footer-div',
                         m('lable', 'Email'),
                         m("input.footer-input[type=text]", {
@@ -162,18 +180,18 @@ let home = {
                             }),
                             value: yourEmail
                         })
-                       
+
                     ),
                     invalidEmail ? m('div.valid', "invalid email id") : '',
                     m('div.footer-div',
                         m('lable', 'Massage'),
-                        m("textarea.footer-input",{
-                            required: true,
-                            oninput: m.withAttr("value", function (value) {
-                                yourMassage = value
-                            }),
-                            value: yourMassage
-                        }
+                        m("textarea.footer-input", {
+                                required: true,
+                                oninput: m.withAttr("value", function (value) {
+                                    yourMassage = value
+                                }),
+                                value: yourMassage
+                            }
 
                         ),
 
